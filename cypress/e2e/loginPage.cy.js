@@ -11,7 +11,7 @@ describe('Login Page', () => {
         cy.contains('Forgot your password?').should('be.visible')   
     });   
 
-    it.only('Logs in with valid credentials', () => {
+    it('Logs in with valid credentials', () => {
         cy.get('input[name="username"]').type('Admin')
         cy.get('input[name="password"]').type('admin123')
         cy.get('button[type="submit"]').click()
